@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class BasicsTest {
 	@Test
-	public void manipulateRightMostBitsTurnOffRightMost1Bit() {
+	public void turnOffRightMost1Bit() {
 		int input  = 0b01011000;
 
 		input = Basics.turnOffRightMost1Bit(input);
