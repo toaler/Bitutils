@@ -5,7 +5,15 @@ public class Basics {
 		return input & (input - 1);
 	}
 
-	public static int turnOnRightMost1Bit(int input) {
+	public static int turnOnRightMost0Bit(final int input) {
 		return input | (input + 1);
+	}
+
+	public static int turnOffTrailing1s(final int input) {
+		return input & (input + 1);
+	}
+
+	public static int turnOnTrailing0s(final int input) {
+		return input | (input - 1);
 	}
 }

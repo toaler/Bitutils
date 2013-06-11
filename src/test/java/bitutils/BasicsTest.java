@@ -23,16 +23,32 @@ public class BasicsTest {
 	}
 	
 	@Test
-	public void turnOnRightMost1Bit() {
+	public void turnOnRightMost0Bit() {
 		int input  = 0b10100111;
 
-		input = Basics.turnOnRightMost1Bit(input);
+		input = Basics.turnOnRightMost0Bit(input);
 		assertEquals(0b10101111, input);
 		
-		input = Basics.turnOnRightMost1Bit(input);
+		input = Basics.turnOnRightMost0Bit(input);
 		assertEquals(0b10111111, input);
 		
-		input = Basics.turnOnRightMost1Bit(input);
+		input = Basics.turnOnRightMost0Bit(input);
 		assertEquals(0b11111111, input);
+	}
+	
+	@Test
+	public void turnOffTrailing1s() {
+		int input = 0b10100111;
+		
+		input = Basics.turnOffTrailing1s(input);
+		assertEquals(0b10100000, input);
+	}
+	
+	@Test
+	public void turnOnTrailing0s() {
+		int input = 0b10101000;
+		
+		input = Basics.turnOnTrailing0s(input);
+		assertEquals(0b10101111, input);
 	}
 }
